@@ -1,0 +1,48 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.base-toast {
+    position: absolute;
+    z-index: 100;
+    width: 100%;
+    bottom: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.toast {
+    font-size: 0.8rem;
+    padding: 0.5rem 1rem;
+    background-color: #232323db;
+    color: #f9f9f9;
+    border-radius: 0.3rem;
+    display: none;
+}
+
+.toast.show {
+    display: block;
+    animation-name: toast;
+    animation-duration: 0.5s;
+    animation-direction: normal;
+}
+
+/* Animação em CSS */
+@keyframes toast {
+    from {
+        opacity: 0;
+        transform: translateY(3rem);
+    }
+
+    50% {
+        transform: translateY(-0.3rem);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
